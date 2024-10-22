@@ -5,8 +5,102 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/_4dp"
     tools:context=".MainActivity">
 
     <include layout="@layout/toolbar" />
+
+    <EditText
+        android:id="@+id/secondNameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/defMargin"
+        android:autofillHints=""
+        android:hint="Фамилия"
+        android:inputType="textPersonName"
+        android:minWidth="@dimen/minWidthET"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/firstNameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/defMargin"
+        android:layout_marginTop="@dimen/defMargin"
+        android:autofillHints=""
+        android:hint="Имя"
+        android:inputType="textPersonName"
+        android:minWidth="@dimen/minWidthET"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toEndOf="@+id/secondNameET"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/ageET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/defMargin"
+        android:autofillHints=""
+        android:hint="Возраст"
+        android:inputType="textPersonName"
+        android:minWidth="@dimen/minWidthET"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondNameET" />
+
+    <TextView
+        android:id="@+id/roleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/defMargin"
+        android:layout_marginTop="@dimen/defMargin"
+        android:text="Должность:"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toEndOf="@+id/ageET"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameET" />
+
+    <Spinner
+        android:id="@+id/roleET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/defMargin"
+        android:autofillHints=""
+        android:hint="Должность"
+        android:inputType="textPersonName"
+        android:minWidth="@dimen/minWidthET"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toEndOf="@+id/ageET"
+        app:layout_constraintTop_toBottomOf="@+id/roleTV" />
+
+    <Button
+        android:id="@+id/saveBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/defMargin"
+        android:text="Сохранить"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageET" />
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bigMargin"
+        android:text="Сотрудники:"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveBTN" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/defMargin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTV" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

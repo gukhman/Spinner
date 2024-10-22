@@ -2,4 +2,5 @@
 <resources>
     <dimen name="defMargin">16dp</dimen>
     <dimen name="bigMargin">50dp</dimen>
+    <dimen name="textSize">20sp</dimen>
 </resources>
