@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/_4dp"
     tools:context=".MainActivity">
 
     <include layout="@layout/toolbar" />
@@ -37,18 +36,27 @@
         app:layout_constraintStart_toEndOf="@+id/secondNameET"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-    <EditText
-        android:id="@+id/ageET"
+    <TextView
+        android:id="@+id/ageTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/defMargin"
+        android:minWidth="@dimen/minWidthET"
+        android:text="Возраст:"
+        android:textSize="@dimen/textSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondNameET" />
+
+    <Spinner
+        android:id="@+id/ageSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:autofillHints=""
-        android:hint="Возраст"
         android:inputType="textPersonName"
         android:minWidth="@dimen/minWidthET"
         android:textSize="@dimen/textSize"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/secondNameET" />
+        app:layout_constraintTop_toBottomOf="@+id/ageTV" />
 
     <TextView
         android:id="@+id/roleTV"
@@ -56,22 +64,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/defMargin"
         android:layout_marginTop="@dimen/defMargin"
+        android:minWidth="@dimen/minWidthET"
         android:text="Должность:"
         android:textSize="@dimen/textSize"
-        app:layout_constraintStart_toEndOf="@+id/ageET"
+        app:layout_constraintStart_toEndOf="@+id/ageTV"
         app:layout_constraintTop_toBottomOf="@+id/firstNameET" />
 
     <Spinner
-        android:id="@+id/roleET"
+        android:id="@+id/roleSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/defMargin"
         android:autofillHints=""
-        android:hint="Должность"
         android:inputType="textPersonName"
         android:minWidth="@dimen/minWidthET"
         android:textSize="@dimen/textSize"
-        app:layout_constraintStart_toEndOf="@+id/ageET"
+        app:layout_constraintStart_toEndOf="@+id/ageSpinner"
         app:layout_constraintTop_toBottomOf="@+id/roleTV" />
 
     <Button
@@ -81,7 +89,7 @@
         android:layout_marginTop="@dimen/defMargin"
         android:text="Сохранить"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ageET" />
+        app:layout_constraintTop_toBottomOf="@+id/ageSpinner" />
 
     <TextView
         android:id="@+id/titleTV"
@@ -95,6 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/saveBTN" />
 
     <ListView
+        android:id="@+id/personLV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/defMargin"

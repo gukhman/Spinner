@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Spinner</string>
     <string name="toolbarTitle">Подбор персонала</string>
+    <string name="exit">Выход</string>
 </resources>
