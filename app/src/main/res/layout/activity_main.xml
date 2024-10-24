@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/defMargin"
         android:autofillHints=""
-        android:hint="Фамилия"
+        android:hint="@string/secondHint"
         android:inputType="textPersonName"
         android:minWidth="@dimen/minWidthET"
         android:textSize="@dimen/textSize"
@@ -29,7 +29,7 @@
         android:layout_marginStart="@dimen/defMargin"
         android:layout_marginTop="@dimen/defMargin"
         android:autofillHints=""
-        android:hint="Имя"
+        android:hint="@string/firstHint"
         android:inputType="textPersonName"
         android:minWidth="@dimen/minWidthET"
         android:textSize="@dimen/textSize"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/defMargin"
         android:minWidth="@dimen/minWidthET"
-        android:text="Возраст:"
+        android:text="@string/ageText"
         android:textSize="@dimen/textSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondNameET" />
@@ -65,19 +65,18 @@
         android:layout_marginStart="@dimen/defMargin"
         android:layout_marginTop="@dimen/defMargin"
         android:minWidth="@dimen/minWidthET"
-        android:text="Должность:"
+        android:text="@string/roleText"
         android:textSize="@dimen/textSize"
         app:layout_constraintStart_toEndOf="@+id/ageTV"
         app:layout_constraintTop_toBottomOf="@+id/firstNameET" />
 
     <Spinner
         android:id="@+id/roleSpinner"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/minWidthET"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/defMargin"
         android:autofillHints=""
         android:inputType="textPersonName"
-        android:minWidth="@dimen/minWidthET"
         android:textSize="@dimen/textSize"
         app:layout_constraintStart_toEndOf="@+id/ageSpinner"
         app:layout_constraintTop_toBottomOf="@+id/roleTV" />
@@ -87,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/defMargin"
-        android:text="Сохранить"
+        android:text="@string/saveBTNtext"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ageSpinner" />
 
@@ -96,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/bigMargin"
-        android:text="Сотрудники:"
+        android:text="@string/employersText"
         android:textSize="@dimen/textSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

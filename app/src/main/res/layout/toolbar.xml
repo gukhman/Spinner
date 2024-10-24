@@ -14,11 +14,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/toolbarTitle">
 
-        <Spinner
-            android:id="@+id/spinner"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end" />
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/filterText"
+                android:textSize="@dimen/textSize" />
+
+            <Spinner
+                android:id="@+id/spinnerFilter"
+                android:layout_width="@dimen/minWidthET"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
 

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 
-class PersonAdapter(private val context: Context, private val data: ArrayList<Person>) :
+class PersonAdapter(private val context: Context, private val data: MutableList<Person>) :
     BaseAdapter() {
 
     private val inflater: LayoutInflater =

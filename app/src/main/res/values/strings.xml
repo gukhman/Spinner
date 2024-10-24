@@ -2,4 +2,11 @@
     <string name="app_name">Spinner</string>
     <string name="toolbarTitle">Подбор персонала</string>
     <string name="exit">Выход</string>
+    <string name="secondHint">Фамилия</string>
+    <string name="firstHint">Имя</string>
+    <string name="ageText">Возраст:</string>
+    <string name="roleText">Должность:</string>
+    <string name="saveBTNtext">Сохранить</string>
+    <string name="employersText">Сотрудники:</string>
+    <string name="filterText">Фильтр:</string>
 </resources>
